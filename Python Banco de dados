@@ -1,0 +1,124 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO8NiJ+6KtiuU6xycz1xwhz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JafeRamos56/C-lculo-porcentagem-c-./blob/main/Python%20Banco%20de%20dados\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GHo9WzX2rBgJ",
+        "outputId": "7060a848-2d51-4d81-8e71-bdb2067c40e6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (1.5.3)\n",
+            "Requirement already satisfied: python-dateutil>=2.8.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)\n",
+            "Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2023.4)\n",
+            "Requirement already satisfied: numpy>=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.25.2)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.8.1->pandas) (1.16.0)\n"
+          ]
+        }
+      ],
+      "source": [
+        "pip install pandas"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd"
+      ],
+      "metadata": {
+        "id": "VenpjH0srR9_"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "data = {'Marca' : ['Apple', 'Lenovo', 'Dell', 'HP'],\n",
+        "        'Modelo' : ['Air MacBook', 'ThinkPad X1 Carbon','Inspiron 15', 'Pavilion x360'],\n",
+        "        'Ram' : ['8 Gigas', '16 Gigas', '12 Gigas',' 12 Gigas'],\n",
+        "        'Armazenamento' : ['256 Gigas', '128 Gigas', '312 Gigas', '128 Gigas'],\n",
+        "\n",
+        "      }\n",
+        "\n",
+        "df = pd.DataFrame(data)\n"
+      ],
+      "metadata": {
+        "id": "9HemZh4vcKeu"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df['Quantidade'] = [12, 14, 24, 7]"
+      ],
+      "metadata": {
+        "id": "WKltkTvJtkgu"
+      },
+      "execution_count": 18,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fKD5-Mfmd-MN",
+        "outputId": "a2ea2fa2-1ef2-48d6-fa35-d8a22a148968"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "    Marca              Modelo        Ram Armazenamento  Quantidade\n",
+            "0   Apple         Air MacBook    8 Gigas     256 Gigas          12\n",
+            "1  Lenovo  ThinkPad X1 Carbon   16 Gigas     128 Gigas          14\n",
+            "2    Dell         Inspiron 15   12 Gigas     312 Gigas          24\n",
+            "3      HP       Pavilion x360   12 Gigas     128 Gigas           7\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
